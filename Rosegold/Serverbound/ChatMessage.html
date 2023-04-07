@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../../js/doc.js"></script>
 
   <meta name="repository-name" content="rosegold">
-  <title>Rosegold::Serverbound::ClientStatus - rosegold main</title>
+  <title>Rosegold::Serverbound::ChatMessage - rosegold main</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../../";
   </script>
@@ -681,7 +681,7 @@
       
         <ul>
   
-  <li class=" " data-id="rosegold/Rosegold/Serverbound/ChatMessage" data-name="rosegold::serverbound::chatmessage">
+  <li class=" current" data-id="rosegold/Rosegold/Serverbound/ChatMessage" data-name="rosegold::serverbound::chatmessage">
       <a href="../../Rosegold/Serverbound/ChatMessage.html">ChatMessage</a>
       
     </li>
@@ -711,7 +711,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="rosegold/Rosegold/Serverbound/ClientStatus" data-name="rosegold::serverbound::clientstatus">
+  <li class="parent " data-id="rosegold/Rosegold/Serverbound/ClientStatus" data-name="rosegold::serverbound::clientstatus">
       <a href="../../Rosegold/Serverbound/ClientStatus.html">ClientStatus</a>
       
         <ul>
@@ -905,26 +905,15 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> Rosegold::Serverbound::ClientStatus
+  <span class="kind">class</span> Rosegold::Serverbound::ChatMessage
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Rosegold/Serverbound/ClientStatus.html">Rosegold::Serverbound::ClientStatus</a></li><li class="superclass"><a href="../../Rosegold/Serverbound/Packet.html">Rosegold::Serverbound::Packet</a></li><li class="superclass"><a href="../../Rosegold/Packet.html">Rosegold::Packet</a></li><li class="superclass"><a href="../../Rosegold/Event.html">Rosegold::Event</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Rosegold/Serverbound/ChatMessage.html">Rosegold::Serverbound::ChatMessage</a></li><li class="superclass"><a href="../../Rosegold/Serverbound/Packet.html">Rosegold::Serverbound::Packet</a></li><li class="superclass"><a href="../../Rosegold/Packet.html">Rosegold::Packet</a></li><li class="superclass"><a href="../../Rosegold/Event.html">Rosegold::Event</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
-
-  <h2>
-    <a id="overview" class="anchor" href="#overview">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Overview
-  </h2>
-
-  <p>Respawn: action=0</p>
 
 
 
@@ -949,8 +938,8 @@
   </h2>
   
     
-      <a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/client_status.cr#L4" target="_blank">
-        rosegold/packets/serverbound/client_status.cr
+      <a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/chat_message.cr#L3" target="_blank">
+        rosegold/packets/serverbound/chat_message.cr
       </a>
     
     <br/>
@@ -971,7 +960,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28action%3AAction%3D%3Arespawn%29-class-method" class="signature"><strong>.new</strong>(action : Action = <span class="n">:respawn</span>)</a>
+        <a href="#new%28message%3AString%29-class-method" class="signature"><strong>.new</strong>(message : String)</a>
         
       </li>
     
@@ -994,6 +983,11 @@
         
       </li>
     
+      <li class="entry-summary">
+        <a href="#read%28io%29-class-method" class="signature"><strong>.read</strong>(io)</a>
+        
+      </li>
+    
   </ul>
 
 
@@ -1009,12 +1003,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#action%3AAction-instance-method" class="signature"><strong>#action</strong> : Action</a>
+        <a href="#message%3AString-instance-method" class="signature"><strong>#message</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#action%3D%28action%3AAction%29-instance-method" class="signature"><strong>#action=</strong>(action : Action)</a>
+        <a href="#message%3D%28message%3AString%29-instance-method" class="signature"><strong>#message=</strong>(message : String)</a>
         
       </li>
     
@@ -1107,18 +1101,18 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(action:Action=:respawn)-class-method">
+    <div class="entry-detail" id="new(message:String)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(action : <a href="../../Rosegold/Serverbound/ClientStatus/Action.html">Action</a> = <span class="n">:respawn</span>)
+        def self.<strong>new</strong>(message : String)
 
-        <a class="method-permalink" href="#new%28action%3AAction%3D%3Arespawn%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28message%3AString%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/client_status.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/chat_message.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1146,7 +1140,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/client_status.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/chat_message.cr#L4" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="read(io)-class-method">
+      <div class="signature">
+        
+        def self.<strong>read</strong>(io)
+
+        <a class="method-permalink" href="#read%28io%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/chat_message.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1163,34 +1173,34 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="action:Action-instance-method">
+    <div class="entry-detail" id="message:String-instance-method">
       <div class="signature">
         
-        def <strong>action</strong> : <a href="../../Rosegold/Serverbound/ClientStatus/Action.html">Action</a>
+        def <strong>message</strong> : String
 
-        <a class="method-permalink" href="#action%3AAction-instance-method">#</a>
+        <a class="method-permalink" href="#message%3AString-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/client_status.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/chat_message.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="action=(action:Action)-instance-method">
+    <div class="entry-detail" id="message=(message:String)-instance-method">
       <div class="signature">
         
-        def <strong>action=</strong>(action : <a href="../../Rosegold/Serverbound/ClientStatus/Action.html">Action</a>)
+        def <strong>message=</strong>(message : String)
 
-        <a class="method-permalink" href="#action%3D%28action%3AAction%29-instance-method">#</a>
+        <a class="method-permalink" href="#message%3D%28message%3AString%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/client_status.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/chat_message.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1206,7 +1216,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/client_status.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/Gjum/rosegold.cr/blob/6bd122f69fa41297e7295f2b7aac44381d80f327/src/rosegold/packets/serverbound/chat_message.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
